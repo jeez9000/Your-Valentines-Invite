@@ -54,3 +54,6 @@ public/photos/*.webp
 # Keep example files and READMEs
 !public/photos/README_PHOTOS.txt
 !public/photos/.gitkeep
+.DS_Store
+public/.DS_Store
+*.HEIC
