@@ -1,6 +1,8 @@
+
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 import loveConfig from '@/config/loveConfig';
 import styles from './ParallaxTimeline.module.css';
 
@@ -82,11 +84,14 @@ export default function ParallaxTimeline() {
                   {/* Photo */}
                   <div className={styles.photoWrapper}>
                     <div className={styles.photoFrame}>
-                      <img 
+                      <Image 
                         src={item.src} 
                         alt={item.milestone.title}
                         className={styles.photo}
+                        width={400}
+                        height={300}
                         loading="lazy"
+                        unoptimized
                       />
                       <div className={styles.photoOverlay}></div>
                     </div>
@@ -116,3 +121,4 @@ export default function ParallaxTimeline() {
     </section>
   );
 }
+```
